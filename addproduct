@@ -25,6 +25,10 @@ class Testproduct(unittest.TestCase):
         
         # validasi
         driver.find_element(By.ID,"shopping_cart_container").click()
+        driver.find_element(By.CLASS_NAME, "inventory_item_name")
+        time.sleep(3)
+        driver.save_screenshot("test.png")
+        time.sleep(3)
 
     def tearDown(self):
         self.browser.close()
